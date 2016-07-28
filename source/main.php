@@ -1,16 +1,15 @@
-<? include("../php/top.php") ?>
-<!-- home 이미지 슬라이더 -->
+<? include("top.html") ?>
 <div class="whole_content">
 	<div class="container">
-	<!-- 사이드 팝업창 -->
+	<!-- side popup -->
 		<div class="popup_wrap">
 			<div id="divpop" class="popup">
 				<table>
 					<tr>
 						<td class="popup_table" align="center">
-							<a href="notice.html"> <img src="../image/side1.png" alt="../image/side1.png"></a>
-							<a href="reservation3.html"> <img src="../image/side2.png" alt="../image/side2.png"></a>
-							<a href="reservation.html"> <img src="../image/side3.png" alt="../image/side3.png"></a>
+							<a href="notice.php"> <img src="../image/side1.png" alt="../image/side1.png"></a>
+							<a href="reservation3.php"> <img src="../image/side2.png" alt="../image/side2.png"></a>
+							<a href="reservation.php"> <img src="../image/side3.png" alt="../image/side3.png"></a>
 							<img src="../image/side4.png" alt="../image/side4.png">
 							<!-- add 'facebook share button' -->
 						</td>
@@ -20,27 +19,28 @@
 							<form name="popup_form"><input type="checkbox" name="chkbox" value="checkbox"/> &nbsp;
 							오늘 하루 닫음 <br>
 							<a href="javascript:closeWin();">[닫기] &nbsp;</a></form>
-						</td> 
+						</td>
 					</tr>
 				</table>
 			</div>
 		</div>
 	<script language="Javascript">
-	var cookiedata = document.cookie;    
-	if ( cookiedata.indexOf("maindiv=done") < 0 ){      
+	var cookiedata = document.cookie;
+	if ( cookiedata.indexOf("maindiv=done") < 0 ){
 		document.getElementById("divpop").style.visibility = "visible";
-		} 
+		}
 		else {
-			document.getElementById("divpop").style.visibility = "hidden"; 
+			document.getElementById("divpop").style.visibility = "hidden";
 	}
     </script>
     <script type="text/javascript"> // for layerd popup
-	function setCookie( name, value, expiredays ) { 
-		var todayDate = new Date(); todayDate.setDate( todayDate.getDate() + expiredays ); document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";" ;} 
-	function closeWin() { 
+	function setCookie( name, value, expiredays ) {
+		var todayDate = new Date(); todayDate.setDate( todayDate.getDate() + expiredays ); document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";" ;}
+	function closeWin() {
 		if ( document.popup_form.chkbox.checked ){ setCookie( "maindiv", "done" , 1 ); } document.getElementById("divpop").style.visibility = "hidden";}
 	</script>
-<!-- 팝업 끝! -->
+	<!-- end of popup -->
+	<!-- main image slider -->
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -91,7 +91,7 @@
 		</a>
 	</div>
 	</div>
-	<!-- home 고정 이미지 -->
+	<!-- home fixed image -->
 	<div class="container">
 		<div class="home_banner">
 			<img class="home_banner_left" src="../image/home_banner1.png" alt="../image/home_banner1.png">
@@ -100,4 +100,4 @@
 	</div>
 </div>
 </body>
-<? include("../php/bottom.php") ?>
+<? include("bottom.html") ?>
