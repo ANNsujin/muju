@@ -47,7 +47,6 @@
 			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
 			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="3"></li>
 		</ol>
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner" role="listbox">
@@ -72,13 +71,6 @@
 					<p>main</p>
 				</div>
 			</div>
-			<div class="item">
-				<img src="../image/main4.jpeg" alt="../image/main4.jpeg">
-				<div class="carousel-caption">
-					<h3>Fourth Image</h3>
-					<p>main</p>
-				</div>
-			</div>
 		</div>
 		<!-- Controls -->
 		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -90,14 +82,7 @@
 			<span class="sr-only">Next</span>
 		</a>
 	</div>
-	</div>
-	<!-- home fixed image -->
-	<div class="container">
-		<div class="home_banner">
-			<img class="home_banner_left" src="../image/home_banner1.png" alt="../image/home_banner1.png">
-			<img class="home_banner_right"src="../image/home_banner2.png" alt="../image/home_banner2.png">
-		</div>
-	</div>
+</div>
 </div>
 </body>
 <? include("bottom.html") ?>
