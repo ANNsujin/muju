@@ -1588,10 +1588,6 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
-.top-menu {
-  margin-right: auto;
-  margin-left: auto;
-}
 .container {
   overflow: visible;
   margin-right: auto;
@@ -1666,8 +1662,6 @@ pre code {
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 .popup_wrap {
   position: fixed;
@@ -1748,36 +1742,52 @@ pre code {
 .contents{
   margin-top: 10px;
   margin-bottom: 20px;
-}
-.contents > p {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #777;
-}
-.contents > h1, h2 {
-  font-family: 'Nanum Pen Script';
+  text-align: center;
 }
 .contents img {
   width: 100%;
   height: auto;
 }
+.contents > .sub-contents >  img {
+  width: 80%;
+  height: auto;
+  text-align: center;
+}
 .contents > #map {
   width: 100%;
   height: 400px;
+}
+.menu_nanum {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: 'Nanum Pen Script';
+  font-size: 18px;
+  margin-top: 10px;
+  color: #777;
 }
 .whole_content {
   margin-top: 150px;
 }
 @media (max-width: 767px) {
-
   .whole_content {
     margin-top: 30px;
   }
   .contents > #map {
-    height: 200px;
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .contents > #map {
+    height: 470px;
   }
 }
 @media (min-width: 1200px) {
+  .contents > #map {
+    height: 550px;
+  }
+  .menu_nanum {
+    font-size: 21px;
+  }
   .whole_content {
     margin-top: 170px;
   }
@@ -7311,18 +7321,20 @@ label {
   width: 15px;
   height: 15px;
 }
-.footer_address_mob {
-    display: none;
-}
 @media (max-width: 767px) {
   .footer_bold > img {
     width: 15px;
     height: 15px;
   }
-  .footer_address {
+}
+.mob {
+    display: none;
+}
+@media (max-width: 767px) {
+  .desktop {
       display: none;
   }
-  .footer_address_mob {
+  .mob {
       display: block;
   }
 }

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="../css/custom.min.css">
 
@@ -29,14 +29,14 @@
 <body>
 <div class="navbar navbar-default navbar-fixed-top">
 	<!-- top menu 상단 위치-->
-	<div class="top-menu">
+	<div class="container-fluid">
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-top">
 				<li>
 					<a href="#"> ADMIN </a>
 				</li>
 				<li>
-					<a href="main.php"> HOME </a>
+					<a href="index.php"> HOME </a>
 				</li>
 			</ul>
 		</div>
@@ -44,8 +44,8 @@
 	<!-- logo -->
 	<div class="container">
 		<div class="navbar-header">
-			<a href="main.php" class="navbar-brand"><img src="../image/logo1.png" alt="../image/logo1.png"></a>
-			<a href="main.php" aling="center" class="navbar-brand_mob"><img src="../image/logo3.png" alt="../image/logo3.png"></a>
+			<a href="index.php" class="navbar-brand"><img src="../image/logo1.png" alt="../image/logo1.png"></a>
+			<a href="index.php" aling="center" class="navbar-brand_mob"><img src="../image/logo3.png" alt="../image/logo3.png"></a>
 			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -105,6 +105,47 @@
 				</li>
 			</ul>
 		</div>
-		<hr class="banner_line">
 	</div>
+	<hr class="banner_line">
 </div>
+<div class="whole_content">
+	<div class="container-fluid">
+	<!-- side popup -->
+		<div class="popup_wrap">
+			<div id="divpop" class="popup">
+				<table>
+					<tr>
+						<td class="popup_table" align="center">
+							<a href="notice.php"> <img src="../image/side1.png" alt="../image/side1.png"></a>
+							<a href="reservation3.php"> <img src="../image/side2.png" alt="../image/side2.png"></a>
+							<a href="reservation.php"> <img src="../image/side3.png" alt="../image/side3.png"></a>
+							<img src="../image/side4.png" alt="../image/side4.png">
+							<!-- add 'facebook share button' -->
+						</td>
+					</tr>
+					<tr>
+						<td class="popup_footer">
+							<form name="popup_form"><input type="checkbox" name="chkbox" value="checkbox"/> &nbsp;
+							오늘 하루 닫음 <br>
+							<a href="javascript:closeWin();">[닫기] &nbsp;</a></form>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	<script language="Javascript">
+	var cookiedata = document.cookie;
+	if ( cookiedata.indexOf("maindiv=done") < 0 ){
+		document.getElementById("divpop").style.visibility = "visible";
+		}
+		else {
+			document.getElementById("divpop").style.visibility = "hidden";
+	}
+    </script>
+    <script type="text/javascript"> // for layerd popup
+	function setCookie( name, value, expiredays ) {
+		var todayDate = new Date(); todayDate.setDate( todayDate.getDate() + expiredays ); document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";" ;}
+	function closeWin() {
+		if ( document.popup_form.chkbox.checked ){ setCookie( "maindiv", "done" , 1 ); } document.getElementById("divpop").style.visibility = "hidden";}
+	</script>
+	</div>

@@ -1,9 +1,7 @@
 <? include("top.html") ?>
-<div class="whole_content">
 	<div class="container">
 		<div class="contents">
 			<p class="menu_nanum">펜션소개 >> 외관 및 야경</p>
-			<br>
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
