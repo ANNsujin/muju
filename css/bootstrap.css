@@ -1765,15 +1765,26 @@ pre code {
   margin-top: 10px;
   color: #777;
 }
+.legend_nanum{
+  font-family: 'Nanum Pen Script';
+  font-size: 18px;
+  margin-top: 10px;
+  color: #777;
+  margin-bottom: 10px;
+}
 .whole_content {
   margin-top: 150px;
 }
 @media (max-width: 767px) {
   .whole_content {
-    margin-top: 30px;
+    margin-top: 35px;
   }
   .contents > #map {
     height: 300px;
+  }
+  .legend_nanum,
+  .menu_nanum {
+    font-size: 21px;
   }
 }
 @media (min-width: 992px) {
@@ -1785,6 +1796,7 @@ pre code {
   .contents > #map {
     height: 550px;
   }
+  .legend_nanum,
   .menu_nanum {
     font-size: 21px;
   }
@@ -2432,6 +2444,21 @@ pre code {
     margin-left: 0%;
   }
 }
+.text-cut {
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  cursor:hand
+}
+.board_button {
+  text-align: left;
+}
+.board_content {
+  font-size:11px;
+  margin-bottom:0px;
+  margin-top: 5px;
+  text-align: left;
+}
 table {
   background-color: transparent;
 }
@@ -2441,33 +2468,23 @@ caption {
   color: #808080;
   text-align: left;
 }
-th {
-  text-align: left;
+.board_title {
+    text-align: left;
+}
+.board_title > a {
+    color: #777777;
+    background-color: transparent;
+}
+.board_title > a:hover,
+.board_title > a:focus {
+  color: #777777;
+  background-color: transparent;
+  font-weight: bold;
 }
 .table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 18px;
-}
-.contents > thead > tr > th >.table_number,
-.contents > tbody > tr > th >.table_number {
-  width: 100px;
-}
-.contents > thead > tr > th >.table_classify,
-.contents > tbody > tr > th >.table_classify {
-  width: 20%;
-}
-.table > thead > tr > th >.table_name,
-.table > tbody > tr > th >.table_name {
-  width: 40%;
-}
-.table > thead > tr > th >.table_writer,
-.table > tbody > tr > th >.table_writer {
-  width: 15%;
-}
-.table > thead > tr > th >.table_date,
-.table > tbody > tr > th >.table_date {
-  width: 15%;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -3187,7 +3204,6 @@ select[multiple].input-lg {
   .form-horizontal .control-label {
     text-align: right;
     margin-bottom: 0;
-    padding-top: 9px;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -3204,6 +3220,9 @@ select[multiple].input-lg {
     padding-top: 6px;
     font-size: 12px;
   }
+}
+.control-label {
+    padding-top: 9px;
 }
 .btn {
   display: inline-block;
@@ -3225,6 +3244,11 @@ select[multiple].input-lg {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+@media (max-width: 767px){
+  .btn {
+    font-size: 10px;
+  }
 }
 .btn:focus,
 .btn:active:focus,
@@ -3657,6 +3681,11 @@ fieldset[disabled] .btn-link:focus {
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
+}
+@media (max-width: 767px){
+  .btn-sm,.btn-xs {
+    font-size: 10px;
+  }
 }
 .btn-block {
   display: block;
@@ -5825,9 +5854,14 @@ button.list-group-item-danger.active:focus {
 }
 .panel-title {
   margin-top: 0;
-  margin-bottom: 0;
-  font-size: 15px;
+  margin-bottom: 3px;
+  font-size: 21px;
   color: inherit;
+}
+@media (max-width: 767px) {
+  .panel-title {
+    font-size: 15px;
+  }
 }
 .panel-title > a,
 .panel-title > small,
@@ -6300,7 +6334,7 @@ button.close {
 }
 .modal-body {
   position: relative;
-  padding: 20px;
+  padding: 10px 20px 20px 20px;
 }
 .modal-footer {
   padding: 20px;
@@ -6341,6 +6375,14 @@ button.close {
   .modal-lg {
     width: 900px;
   }
+}
+#pwModal_title {
+    font-weight: bold;
+}
+#pwModal_body,
+#pwModal_body > form > label{
+    font-size:12px;
+    font-weight: bold;
 }
 .tooltip {
   position: absolute;
@@ -7337,4 +7379,14 @@ label {
   .mob {
       display: block;
   }
+}
+.download_link > a {
+    color: #777777;
+    background-color: transparent;
+}
+.download_link > a:hover,
+.download_link > a:focus {
+  color: #777777;
+  background-color: transparent;
+  font-weight: bold;
 }
