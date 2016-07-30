@@ -6376,11 +6376,11 @@ button.close {
     width: 900px;
   }
 }
-#pwModal_title {
+.board_Modal_title {
     font-weight: bold;
 }
-#pwModal_body,
-#pwModal_body > form > label{
+.board_Modal_body,
+.board_Modal_body > form > label{
     font-size:12px;
     font-weight: bold;
 }
@@ -7360,8 +7360,8 @@ label {
   font-weight: bold;
 }
 .footer_bold > img {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
 }
 @media (max-width: 767px) {
   .footer_bold > img {
@@ -7379,14 +7379,4 @@ label {
   .mob {
       display: block;
   }
-}
-.download_link > a {
-    color: #777777;
-    background-color: transparent;
-}
-.download_link > a:hover,
-.download_link > a:focus {
-  color: #777777;
-  background-color: transparent;
-  font-weight: bold;
 }

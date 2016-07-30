@@ -1,4 +1,5 @@
 <? include("top.html") ?>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <?php
 	$ID=$_GET['ID'];
 	$connection = mysqli_connect("mysql.hostinger.kr","u318533843_osu","osu0912","u318533843_osu");
@@ -9,10 +10,21 @@
 		<div class="contents">
 			<form enctype="multipart/form-data" class="form-horizontal" action="review_do.php" method="post">
 				<fieldset>
-				<legend class="legend_nanum">공지사항 수정하기 | 글 번호 :&nbsp <?=$ID?></legend>
+				<legend class="legend_nanum">여행후기 수정하기 | 글 번호 :&nbsp <?=$ID?></legend>
 				<div class="form-group">
 			      <input type="hidden"  name="ID" value="<?= $row['ID'] ?>">
 			    </div>
+				<div class="form-group">
+					<label for="inputWriter" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 control-label">Writer</label>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10">
+						<input type="text" class="form-control" id="inputWriter" name="Writer" value="<?= $row['Writer'] ?>">
+					</div>
+					<div class="mob col-xs-12" style="height:5px"></div>
+					<label for="inputPassword" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 control-label">Password</label>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10">
+						<input type="password" class="form-control" id="inputPassword" name="PW" value="<?= $row['PW'] ?>">
+					</div>
+				</div>
 				<div class="form-group">
 					<label for="inputTitle" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 control-label">Title</label>
 					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
@@ -42,11 +54,19 @@
 					<div style="visibility:hidden;" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 control-label">첨부파일 설명</div>
 					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="text-align: left; margin-bottom: 5px;">
 						<div class="desktop">
+							&raquo Writer와 Password는 1글자 이상 10글자 이하의 영문 또는 한글로 작성되어야 합니다.<br>
 							&raquo 첨부파일은 특수문자를 제외한 영문의 이름이어야 하며,&nbsp2MB이하, jpeg, gif, png, jpg 형식이어야 합니다.<br>&nbsp&nbsp&nbsp 파일은 최대 1개까지 올릴 수 있습니다.
 						</div>
 						<div class="mob">
+							&raquo Writer와 Password는 1글자 이상 10글자 이하의<br>&nbsp&nbsp&nbsp 영문 또는 한글로 작성되어야 합니다.<br>
 							&raquo 첨부파일은 특수문자를 제외한 영문의 이름이어야 하며,<br>&nbsp&nbsp&nbsp 2MB이하, jpeg, gif, png, jpg 형식이어야 합니다.<br>&nbsp&nbsp&nbsp 파일은 최대 1개까지 올릴 수 있습니다.
 						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label style="visibility:hidden;" for="select" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 control-label">확인</label>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-8">
+						 <div class="g-recaptcha" data-sitekey="<?php echo '6LcFXyYTAAAAAIwbjZPfOwGoG381AQZEdZ7siJdB'; // sitekey ?>"></div>
 					</div>
 				</div>
 				<div class="board_button">

@@ -89,12 +89,13 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 id="pwModal_title" class="modal-title" id="myModalLabel">공지사항 글쓰기</h4>
+                    <h4 class="modal-title board_Modal_title" id="myModalLabel">공지사항 글쓰기</h4>
                   </div>
                   <form action="notice_check_auth.php" method="post">
-                      <div id="pwModal_body" class="modal-body">
+                      <div class="modal-body board_Modal_body">
                         <p>&raquo 공지사항은 펜션지기만 작성할 수 있습니다.</p>
     					<label for="inputPw"> 비밀번호를 입력하세요. </label><br>
+						<input type="hidden"  name="check" value="0"> <!-- 글쓰기 value -->
                         <input type="password" class="form-control" id="inputPw" name="PW">
                       </div>
                       <div class="modal-footer">
@@ -105,7 +106,6 @@
                 </div>
               </div>
             </div>
-
 		</div>
 	</div>
 </div>

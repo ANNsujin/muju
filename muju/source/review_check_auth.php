@@ -4,36 +4,20 @@
 	$check=$_POST['check'];
 	$PW=$_POST['PW'];
     $connection = mysqli_connect("mysql.hostinger.kr","u318533843_osu","osu0912","u318533843_osu");
-	$result = mysqli_query($connection, "SELECT * FROM admin WHERE ID='admin'");
+	$result = mysqli_query($connection, "SELECT * FROM review_board WHERE ID=$ID");
 	$row = mysqli_fetch_assoc($result);
-	if($check==0) // 게시글 작성
+	if($check==1) // 게시글 수정
 	{
 		if($PW!=$row['PW']) {
 		?>
 		<script>
 			alert("비밀번호가 틀렸습니다.");
-			ocation.href='notice.php';
+			location.href='review_view.php?ID=<?= $row['ID'] ?>';
 		</script>
 		<?php
 		} else { ?>
 		<script>
-			location.href='notice_write.php';
-		</script>
-		<?php
-		}
-	}
-	else if($check==1) // 게시글 수정
-	{
-		if($PW!=$row['PW']) {
-		?>
-		<script>
-			alert("비밀번호가 틀렸습니다.");
-			location.href='notice_view.php?ID=<?= $ID ?>';
-		</script>
-		<?php
-		} else { ?>
-		<script>
-			location.href='notice_modify.php?ID=<?= $ID ?>';
+			location.href='review_modify.php?ID=<?= $row['ID'] ?>';
 		</script>
 		<?php
 		}
@@ -44,13 +28,14 @@
 		?>
 		<script>
 			alert("비밀번호가 틀렸습니다.");
-			location.href='notice_view.php?ID=<?= $ID ?>';
+			location.href='review_view.php?ID=<?= $row['ID'] ?>';
 		</script>
 		<?php
 		} else { ?>
 		<script>
-			location.href='notice_delete.php?ID=<?= $ID ?>';
+			location.href='review_delete.php?ID=<?= $row['ID'] ?>';
 		</script>
 		<?php
 		}
 	}
+?>

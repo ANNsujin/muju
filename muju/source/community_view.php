@@ -2,12 +2,12 @@
 <?php
 	$ID=$_GET['ID'];
 	$connection = mysqli_connect("mysql.hostinger.kr","u318533843_osu","osu0912","u318533843_osu");
-	mysqli_query($connection, "UPDATE review_board SET View=View+1 WHERE ID=$ID");
-	$result = mysqli_query($connection, "SELECT * FROM review_board WHERE ID=$ID");
+	mysqli_query($connection, "UPDATE community_board SET View=View+1 WHERE ID=$ID");
+	$result = mysqli_query($connection, "SELECT * FROM community_board WHERE ID=$ID");
 	$row = mysqli_fetch_assoc($result);
 ?>
 	<div class="container">
-		<p class="menu_nanum">여행후기</p>
+		<p class="menu_nanum">자유게시판</p>
 		<div class="contents">
 			<div class="panel panel-default">
 				<div class="panel-heading" style="text-align:left;">
@@ -34,24 +34,24 @@
 				</div>
 			</div>
 			<div class="board_button">
-			<button onclick="location.href='review.php';" class="btn btn-default btn-sm">목록</button>
+			<button onclick="location.href='community.php';" class="btn btn-default btn-sm">목록</button>
 			<?php
 			//  현재 글보다 id 값이 큰 글 중 가장 작은 것을 가져온다. 즉 바로 이전 글
-			$query=mysqli_query($connection, "SELECT ID FROM review_board WHERE ID > $ID limit 1");
+			$query=mysqli_query($connection, "SELECT ID FROM community_board WHERE ID > $ID limit 1");
 			$prev_id=mysqli_fetch_assoc($query);
 			if ($prev_id['ID']) // 이전 글이 있을 경우
 			{	?>
-				<button onclick="location.href='review_view.php?ID=<?= $prev_id['ID'] ?>'" class="btn btn-default btn-sm">이전</button>
+				<button onclick="location.href='community_view.php?ID=<?= $prev_id['ID'] ?>'" class="btn btn-default btn-sm">이전</button>
 			<?php }
 			else
 			{	?>
 				<button onclick="alert ('이전 글이 존재하지 않습니다.');" class="btn btn-default btn-sm">이전</button>
 			<?php }
-			$query=mysqli_query($connection, "SELECT ID FROM review_board WHERE ID < $ID order by ID desc limit 1");
+			$query=mysqli_query($connection, "SELECT ID FROM community_board WHERE ID < $ID order by ID desc limit 1");
 			$next_id=mysqli_fetch_assoc($query);
 			if ($next_id['ID'])
 			{	?>
-				<button onclick="location.href='review_view.php?ID=<?= $next_id['ID'] ?>'" class="btn btn-default btn-sm">다음</button>
+				<button onclick="location.href='community_view.php?ID=<?= $next_id['ID'] ?>'" class="btn btn-default btn-sm">다음</button>
 			<?php }
 			else
 			{	?>
@@ -67,11 +67,11 @@
 				<div class="modal-content">
 				  <div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title board_Modal_title" id="myModalLabel01">여행후기 수정하기</h4>
+					<h4 class="modal-title board_Modal_title" id="myModalLabel01">게시글 수정하기</h4>
 				  </div>
-				  <form action="review_check_auth.php" method="post">
+				  <form action="community_check_auth.php" method="post">
 					  <div class="modal-body board_Modal_body">
-						<p>&raquo 여행후기 작성자만 수정할 수 있습니다.</p>
+						<p>&raquo 게시글 작성자만 수정할 수 있습니다.</p>
 						<label for="inputPw"> 비밀번호를 입력하세요. </label><br>
 						<input type="hidden"  name="check" value="1"> <!-- 수정 value -->
 					    <input type="hidden"  name="ID" value="<?= $row['ID'] ?>">
@@ -92,11 +92,11 @@
 				<div class="modal-content">
 				  <div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title board_Modal_title" id="myModalLabel02">여행후기 삭제하기</h4>
+					<h4 class="modal-title board_Modal_title" id="myModalLabel02">게시글 삭제하기</h4>
 				  </div>
-				  <form action="review_check_auth.php" method="post">
+				  <form action="community_check_auth.php" method="post">
 					  <div class="modal-body board_Modal_body">
-						<p>&raquo 여행후기 작성자만 삭제할 수 있습니다.</p>
+						<p>&raquo 게시글 작성자만 삭제할 수 있습니다.</p>
 						<label for="inputPw"> 비밀번호를 입력하세요. </label><br>
 						<input type="hidden"  name="check" value="2"> <!-- 삭제 value -->
 					    <input type="hidden"  name="ID" value="<?= $row['ID'] ?>">

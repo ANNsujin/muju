@@ -56,8 +56,58 @@
 			{	?>
 				<button onclick="alert ('다음 글이 존재하지 않습니다.');" class="btn btn-default btn-sm">다음</button>
 			<?php }	?>
-			<button onclick="location.href='notice_modify.php?ID=<?= $ID ?>';" class="btn btn-info btn-primary btn-sm">수정</button>
-			<button onclick="location.href='notice_delete.php?ID=<?= $ID ?>';" class="btn btn-info btn-primary btn-sm">삭제</button>
+			<button type="button" class="btn btn-info btn-primary btn-sm" data-toggle="modal" data-target="#modModal">수정</button>
+			<button type="button" class="btn btn-info btn-primary btn-sm" data-toggle="modal" data-target="#delModal">삭제</button>
+			</div>
+
+			<!-- Modify Modal -->
+			<div class="modal fade" id="modModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel01">
+			  <div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title board_Modal_title" id="myModalLabel01">여행후기 수정하기</h4>
+				  </div>
+				  <form action="notice_check_auth.php" method="post">
+					  <div class="modal-body board_Modal_body">
+						<p>&raquo 공지사항은 펜션지기만 수정할 수 있습니다.</p>
+						<label for="inputPw"> 비밀번호를 입력하세요. </label><br>
+						<input type="hidden"  name="check" value="1"> <!-- 수정 value -->
+					    <input type="hidden"  name="ID" value="<?= $row['ID'] ?>">
+						<input type="password" class="form-control" id="inputPw" name="PW">
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">닫기</button>
+						<button type="submit" class="btn btn-info btn-primary btn-sm">제출</button>
+					  </div>
+				  </form>
+				</div>
+			  </div>
+			</div>
+
+			<!-- Delete Modal -->
+			<div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel02">
+			  <div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title board_Modal_title" id="myModalLabel02">여행후기 삭제하기</h4>
+				  </div>
+				  <form action="notice_check_auth.php" method="post">
+					  <div class="modal-body board_Modal_body">
+						<p>&raquo 공지사항은 펜션지기만 삭제할 수 있습니다.</p>
+						<label for="inputPw"> 비밀번호를 입력하세요. </label><br>
+						<input type="hidden"  name="check" value="2"> <!-- 삭제 value -->
+					    <input type="hidden"  name="ID" value="<?= $row['ID'] ?>">
+						<input type="password" class="form-control" id="inputPw" name="PW">
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">닫기</button>
+						<button type="submit" class="btn btn-info btn-primary btn-sm">제출</button>
+					  </div>
+				  </form>
+				</div>
+			  </div>
 			</div>
 		</div>
 		<?php  mysqli_close($connection); ?>

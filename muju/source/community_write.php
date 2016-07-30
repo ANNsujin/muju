@@ -2,9 +2,19 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 	<div class="container">
 		<div class="contents">
-			<form enctype="multipart/form-data" class="form-horizontal" action="review_do.php" method="post">
+			<form enctype="multipart/form-data" class="form-horizontal" action="community_do.php" method="post">
 				<fieldset>
-				<legend class="legend_nanum">여행후기 글쓰기</legend>
+				<legend class="legend_nanum">자유게시판 글쓰기</legend>
+				<div class="form-group">
+					<label for="select" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 control-label">분류</label>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10">
+						<select class="form-control" id="select" name="Classify">
+							<option></option>
+							<option>질문답변</option>
+							<option>기타</option>
+						</select>
+					</div>
+				</div>
 				<div class="form-group">
 					<label for="inputWriter" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 control-label">Writer</label>
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10">

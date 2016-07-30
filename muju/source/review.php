@@ -36,7 +36,7 @@
 					for($i=0;$i<$count;$i++) { $row = mysqli_fetch_assoc($result); ?>
 				<tr>
 					<th class="desktop"> <?= $row['ID'] ?> </th>
-					<td class="board_title text-cut"> <a href='view_review.php?ID=<?= $row['ID'] ?>'> <?= $row['Title'] ?> </a>
+					<td class="board_title text-cut"> <a href='review_view.php?ID=<?= $row['ID'] ?>'> <?= $row['Title'] ?> </a>
 						<span class="mob" style="font-size:10px; color:#888; padding-top:5px;">
 						    <span> 날짜&nbsp <?php echo date('y-m-d',strtotime($row['Date'])); ?> </span>
 						    <span style="padding-left:10px;"> 조회&nbsp <?= $row['View'] ?> </span>
