@@ -1,9 +1,13 @@
 <? include("top.html") ?>
 	<div class="container">
-		<p class="menu_nanum">펜션소개 >> 위치 및 교통안내</p>
+		<div class="menu_nanum">
+			<img src="../image/menu1_3.png" arc="../image/menu1_3.png">
+			<span> 펜션소개 >> 위치 및 교통안내</span>
+		</div>
+		<hr class="menu_line">
 		<div class="contents">
-			<div id="map" ></iframe></div>
-			<br><br>
+			<div id="map" ></iframe></div><br>
+			<hr class="menu_line_sub">
 			<div class="desktop sub-contents"><img src="../image/traffic.png" alt="../image/traffic.png"></div>
 			<div class="mob"><img src="../image/traffic_mob.png" arc="../image/traffic_mob.png"></div>
 		</div>

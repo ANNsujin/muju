@@ -1,7 +1,11 @@
 <? include("top.html") ?>
 	<div class="container">
+		<div class="menu_nanum">
+			<img src="../image/menu1_2.png" arc="../image/menu1_2.png">
+			<span> 펜션소개 >> 외관 및 야경</span>
+		</div>
+		<hr class="menu_line">
 		<div class="contents">
-			<p class="menu_nanum">펜션소개 >> 외관 및 야경</p>
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">

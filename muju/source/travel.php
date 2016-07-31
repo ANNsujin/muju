@@ -1,6 +1,10 @@
 <? include("top.html") ?>
 	<div class="container">
-		<p class="menu_nanum">주변 관광지 >> 덕유산 리조트</p>
+		<div class="menu_nanum">
+			<img src="../image/menu4_1.png" arc="../image/menu4_1.png">
+			<span> 주변 관광지 >> 덕유산 리조트</span>
+		</div>
+		<hr class="menu_line">
 		<div class="contents">
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				<!-- Wrapper for slides -->

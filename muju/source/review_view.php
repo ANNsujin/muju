@@ -8,6 +8,7 @@
 ?>
 	<div class="container">
 		<p class="menu_nanum">여행후기</p>
+		<hr class="menu_line">
 		<div class="contents">
 			<div class="panel panel-default">
 				<div class="panel-heading" style="text-align:left;">

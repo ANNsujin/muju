@@ -12,7 +12,11 @@
    $result = $connection->query($sql);
 ?>
 	<div class="container">
-		<p class="menu_nanum">커뮤니티 >> 여행후기</p>
+		<div class="menu_nanum">
+			<img src="../image/menu7_1.png" arc="../image/menu7_1.png">
+			<span> 커뮤니티 >> 여행후기</span>
+		</div>
+		<hr class="menu_line">
 		<div class="contents">
 			<table class="table table-striped table-hover" style="table-layout:fixed;">
 				<colgroup>

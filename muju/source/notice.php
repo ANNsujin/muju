@@ -12,7 +12,11 @@
     $result = $connection->query($sql);
 ?>
 	<div class="container">
-		<p class="menu_nanum">공지사항</p>
+		<div class="menu_nanum">
+			<img src="../image/menu6_0.png" arc="../image/menu6_0.png">
+			<span> 공지사항</span>
+		</div>
+		<hr class="menu_line">
 		<div class="contents">
 			<table class="table table-striped table-hover" style="table-layout:fixed;">
 				<colgroup>
