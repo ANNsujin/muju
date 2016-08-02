@@ -1,8 +1,8 @@
 <? include("top.html") ?>
 	<div class="container">
 		<div class="menu_nanum">
-			<img src="../image/menu5_1.png" arc="../image/menu5_1.png">
-			<span> 예약하기 >> 유의사항</span>
+			<img src="../image/menu5_2.png" arc="../image/menu5_2.png">
+			<span> 예약하기 >> 온라인예약</span>
 		</div>
 		<hr class="menu_line">
 		<div class="contents">

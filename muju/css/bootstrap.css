@@ -7420,7 +7420,115 @@ label {
       display: block;
   }
 }
-.room_main > img {
+.room_main > .room_blank {
+  height: 180px;
+}
+.room_main > .room_archi {
   width: 100%;
   height: auto;
+}
+.room_img {
+  margin-top: 20px;
+  text-align: left;
+}
+.room_img > .thumbnail {
+  margin-bottom: 0px;
+}
+.room_side {
+  text-align: left;
+}
+.room_side > hr {
+  height:10px;
+  border-top: 1px solid #c7c7c7;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.room_side > .room_detail {
+  padding-left: 15px;
+  padding-right: 15px;
+ }
+.room_side > .room_detail > a:hover,
+.room_side > .room_detail > a:focus {
+  text-decoration: none;
+}
+.room_side > .room_detail > a > h3 {
+  font-family: 'Nanum Pen Script';
+}
+.room_side > .room_icon {
+  margin-bottom: 20px;
+}
+.room_side > .room_icon > img{
+  width: 5%;
+  height: auto;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.room_table {
+  text-align: center;
+}
+.room_table > tbody > tr > .r_title_down {
+  border-bottom: double #777777
+}
+.room_table > tbody > tr > .r_title_up {
+  border-top: double #777777;
+}
+.room_table > tbody > tr > .r_title_dark {
+  border-right: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  padding: 2px;
+  background-color: #9BCCD4;
+}
+.room_table > tbody > tr > .r_title_light {
+  border-right: 1px solid #fff;
+  color: #8e8e8e;
+  text-align: center;
+  padding: 2px;
+  background-color: #E5EDEE;
+}
+.room_table > tbody > tr > td,
+.room_table > tbody > tr > th {
+  font-size : 12px;
+  padding: 5px 0;
+}
+.room_footer > p {
+  margin-left: 20px;
+  font-size: 12px;
+}
+.hide-bullets {
+  list-style: none;
+  margin-left: -40px;
+  margin-top: 20px;
+}
+.hide-bullets > .room {
+  position: relative;
+  float: left;
+  width: 12.5%
+}
+.hide-bullets > .room > .thumbnail {
+  margin-left :5px;
+  margin-right:5px;
+}
+.facility_img > .item > .carousel-caption {
+  left: 0%;
+  right: 0%;
+  background-color: rgba(0,0,0,0.15);
+}
+@media (max-width: 991px) {
+  .facility_img > .item > .carousel-caption {
+    height: 80px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .facility_img > .item > .carousel-caption {
+    display: block;
+    height: 55px;
+    bottom: 10px;
+    padding-bottom: 2px;
+  }
+  .facility_detail {
+    font-size : 16px;
+  }
 }
