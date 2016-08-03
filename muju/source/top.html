@@ -5,7 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="../css/custom.min.css">
-
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+  	  <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 	<script>
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-23019901-1']);
@@ -26,15 +31,14 @@
 
 	<title> Muju [무주평강펜션에 오신 것을 환영합니다] </title>
 </head>
+<!--
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart ="return false">-->
 <body>
 <div class="navbar navbar-default navbar-fixed-top">
 	<!-- top menu 상단 위치-->
 	<div class="container-fluid">
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-top">
-				<li>
-					<a href="#"> ADMIN </a>
-				</li>
 				<li>
 					<a href="index.php"> HOME </a>
 				</li>
@@ -94,7 +98,7 @@
 					<a href="#" class="dropdown-toggle nav-effect" data-toggle="dropdown" id="banner_menu" aria-expanded="false"> 예약하기 <span class="caret"></span></a>
 					<ul class="dropdown-menu" aria-labelledby="banner_menu">
 						<li><a href="reservation.php">요금안내 및 유의사항</a></li>
-						<li><a href="reservation2.php">온라인예약</a></li>
+						<li><a href="reservation2.php" onclick="window.open(this.href, 'win1'); return false;" onkeypress="this.onclick()">온라인예약</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -121,7 +125,7 @@
 					<tr>
 						<td class="popup_table" align="center">
 							<a href="notice.php"> <img src="../image/side1.png" alt="../image/side1.png"></a>
-							<a href="reservation3.php"> <img src="../image/side2.png" alt="../image/side2.png"></a>
+							<a href="reservation2.php" onclick="window.open(this.href, 'win1'); return false;" onkeypress="this.onclick()"><img src="../image/side2.png" alt="../image/side2.png"></a>
 							<a href="reservation.php"> <img src="../image/side3.png" alt="../image/side3.png"></a>
 							<img src="../image/side4.png" alt="../image/side4.png">
 							<!-- add 'facebook share button' -->

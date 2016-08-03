@@ -1740,6 +1740,20 @@ pre code {
     margin-left: -130px;
   }
 }
+.contents_res {
+  margin-top:0px;
+  margin-bottom:0px;
+  text-align: center;
+}
+.contents_res > embed {
+  width:100%;
+  height:1100px;
+}
+@media (max-width:767px) {
+  .contents_res > embed {
+    height:2300px;
+  }
+}
 .contents{
   margin-top: 10px;
   margin-bottom: 20px;
@@ -1779,11 +1793,11 @@ pre code {
   margin-bottom: 10px;
 }
 .whole_content {
-  margin-top: 150px;
+  margin-top: 200px;
 }
 @media (max-width: 767px) {
   .whole_content {
-    margin-top: 35px;
+    margin-top: 85px;
   }
   .contents > #map {
     height: 300px;
@@ -1815,7 +1829,7 @@ pre code {
     font-size: 21px;
   }
   .whole_content {
-    margin-top: 170px;
+    margin-top: 220px;
   }
   .menu_nanum > img {
     height: 120px;
@@ -7381,7 +7395,7 @@ label {
   border-color: #dddddd;
 }
 .footer_content {
-  font-size: 10px;
+  font-size: 11px;
 }
 .footer_content > ul > li > a:hover,
 .footer_content > ul > li > a:focus {
@@ -7396,7 +7410,7 @@ label {
   font-weight: bold;
 }
 .footer_bold {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
 }
 .footer_bold > img {
@@ -7469,9 +7483,6 @@ label {
 .room_table > tbody > tr > .r_title_down {
   border-bottom: double #777777
 }
-.room_table > tbody > tr > .r_title_up {
-  border-top: double #777777;
-}
 .room_table > tbody > tr > .r_title_dark {
   border-right: 1px solid #fff;
   color: #fff;
@@ -7490,6 +7501,9 @@ label {
 .room_table > tbody > tr > th {
   font-size : 12px;
   padding: 5px 0;
+}
+.room_footer {
+  text-align: left;
 }
 .room_footer > p {
   margin-left: 20px;
@@ -7531,4 +7545,69 @@ label {
   .facility_detail {
     font-size : 16px;
   }
+}
+.res_title {
+  padding-left: 50px;
+  padding-right: 0px;
+  margin-top: -10px;
+}
+.box_title > p,
+.res_title > p {
+  font-size: 24px;
+  font-family: 'Nanum Pen Script';
+  margin: 0;
+}
+.box_title > p {
+  margin-left: 20px;
+  text-align:left;
+}
+@media (min-width: 1200px) {
+  .res_title {
+    padding-left: 70px;
+  }
+  .box_title > p,
+  .res_title > p {
+    font-size: 35px;
+  }
+}
+@media (min-width: 992px) {
+  .res_title {
+    padding-left: 65px;
+  }
+  .box_title > p,
+  .res_title > p {
+    font-size: 30px;
+  }
+}
+.res_table {
+  text-align: left;
+}
+.res_table > tbody > tr > .b_title_down {
+  border-bottom: double #777777
+}
+.res_table > tbody > tr > .b_title_dark {
+  border-right: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  padding: 2px;
+  background-color: #9BCCD4;
+}
+.res_table > tbody > tr > td,
+.res_table > tbody > tr > th {
+  font-size : 12px;
+  padding: 10px 15px;
+}
+.res_bottom {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: left;
+}
+.res_bottom > p,
+.res_bottom > pre{
+  font-size: 12px;
+}
+@media (max-width: 767px) {
+  .res_bottom {
+    margin-top: 5px;
 }
