@@ -5,7 +5,7 @@
     */
 
 	$ID=$_GET['ID'];
-    $connection = mysqli_connect("mysql.hostinger.kr","u318533843_osu","osu0912","u318533843_osu");
+    $connection = mysqli_connect("localhost","bgbanana","bgpbsp0818");
 	$result = mysqli_query($connection, "SELECT * FROM review_board WHERE ID=$ID");
 	$row = mysqli_fetch_assoc($result);
 	@unlink($row['File_en']);

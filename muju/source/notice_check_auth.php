@@ -3,7 +3,7 @@
 	$ID=$_POST['ID'];
 	$check=$_POST['check'];
 	$PW=$_POST['PW'];
-    $connection = mysqli_connect("mysql.hostinger.kr","u318533843_osu","osu0912","u318533843_osu");
+    $connection = mysqli_connect("localhost","bgbanana","bgpbsp0818");
 	$result = mysqli_query($connection, "SELECT * FROM admin WHERE ID='admin'");
 	$row = mysqli_fetch_assoc($result);
 	if($check==0) // 게시글 작성

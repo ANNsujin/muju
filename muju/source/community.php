@@ -1,7 +1,7 @@
 <?php
    include("top.html");
    /* 페이징 준비 */
-   $connection = mysqli_connect("mysql.hostinger.kr","u318533843_osu","osu0912","u318533843_osu");
+   $connection = mysqli_connect("localhost","bgbanana","bgpbsp0818");
    $result = mysqli_query($connection, "SELECT * FROM community_board");
    $total = mysqli_num_rows($result); //전체 게시글의 수
    include("paging.php");

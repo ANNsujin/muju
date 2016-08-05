@@ -3,7 +3,7 @@
 	$ID=$_POST['ID'];
 	$check=$_POST['check'];
 	$PW=$_POST['PW'];
-    $connection = mysqli_connect("mysql.hostinger.kr","u318533843_osu","osu0912","u318533843_osu");
+    $connection = mysqli_connect("localhost","bgbanana","bgpbsp0818");
 	$result = mysqli_query($connection, "SELECT * FROM community_board WHERE ID=$ID");
 	$row = mysqli_fetch_assoc($result);
 	if($check==1) // 게시글 수정

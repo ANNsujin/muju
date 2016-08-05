@@ -1,7 +1,6 @@
 <meta charset="UTF-8">
 <?php
-	$connection = mysqli_connect("mysql.hostinger.kr","u318533843_osu","osu0912","u318533843_osu");
-
+	$connection = mysqli_connect("localhost","bgbanana","bgpbsp0818");
 	function file_errmsg($code){
 		switch($code){
 		case(UPLOAD_ERR_INI_SIZE):
